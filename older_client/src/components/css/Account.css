@@ -1,0 +1,190 @@
+.AccountContainer {
+    margin-top: 103px;
+    min-height: 88vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.AccountFormBox {
+    min-height: 88vh;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+}
+
+.AccountBox {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BoxForm {
+    width: 300px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.BoxFormTitle {
+    width:300px;
+    height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.BoxMsg{
+    height: 30px;
+    width: 300px;
+}
+
+.BoxFormInput {
+    width: 300px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.BoxFormInput input[type='text'],
+.BoxFormInput input[type='email'],
+.BoxFormInput input[type='password'] {
+    width: 250px;
+    height: 30px;
+    margin: 10px;
+    font-family: 'Fjalla One', sans-serif;
+    border: 1px solid black;
+}
+
+.BoxFormInput input[type='submit'] {
+    width: 250px;
+    height: 30px;
+    font-family: 'Fjalla One', sans-serif;
+    border: 1px solid black;
+    background: #022649;
+    color: white;
+}
+
+.BoxFormInput input[type='submit']:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.AccountUsername {
+    width: 250px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 0.8em;
+}
+
+.AccountEmail {
+    width: 250px;
+    height:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 0.8em;
+}
+
+.AccountVerify {
+    width: 250px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 0.8em;
+}
+
+.AccountDelete {
+    width: 170px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    background: darkred;
+    color: white;
+}
+
+.AccountDelete:hover {
+    background: red;
+    cursor: pointer;
+}
+
+.DeleteAccountMessage {
+    width:300px;
+    height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.DeleteAccountForm {
+    width: 300px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.DeleteAccountForm input[type='password'] {
+    width: 250px;
+    height: 30px;
+    margin: 10px;
+    font-family: 'Fjalla One', sans-serif;
+    border: 1px solid black;
+}
+
+.DeleteAccountForm input[type='submit'] {
+    width: 250px;
+    height: 30px;
+    background: darkred;
+    color: white;
+    border: 1px solid darkred;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.DeleteAccountForm input[type='submit']:hover {
+    background: red;
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+.CancelDelete {
+    width: 300px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.CancelDelete i { 
+    margin-right: 10px;
+}
+
+.Msg {
+    color: darkred;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 0.7em;
+}

@@ -1,0 +1,266 @@
+.PlayerBoxBody {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    bottom: 0;
+    position: fixed;
+    background: #032649bd
+}
+
+.PlayerBox {
+    width: 99%;
+    height: 200px;
+    border: 2px solid #022649;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -2px -4px 5px 1px #022649;
+    margin-bottom: 7px;
+    background: white;
+}
+
+.PlayerBoxClose {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.PlayerBoxClose i {
+    color: #022649;
+    margin-right: 10px;
+}
+
+.PlayerBoxClose i:hover {
+    cursor: pointer;
+}
+
+.PlayerBoxContent {
+    height: 180px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.PlayerBoxCover {
+    height: 170px;
+    width: 170px;
+    background: rosybrown;
+}
+
+.DisplayAddSuccess{
+    height: 170px;
+    width: 170px;
+    background: #022649;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+.PlayerBoxCover img {
+    height: 170px;
+    width: 170px;
+}
+
+.PlayerBoxController {
+    height: 170px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #02264978;
+}
+
+.PlayerBoxController i {
+    margin: 10px;
+    font-size: 3em;
+}
+
+.PlayerBoxController i:hover {
+    cursor: pointer;
+    color: #022649;
+}
+
+.PlayerBoxMenuOptions {
+    height: 170px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.PlayerBoxOptions {
+    height: 140px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #022649;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+}
+
+.PlayerBoxOptions i {
+    font-size: 1.2em;
+}
+
+.PlayerBoxMenu {
+    height: 170px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PlayerBoxMenu i {
+    color: #02264978;
+    font-size: 1.6em;
+}
+
+.PlayerBoxMenu i:hover {
+    color: #022649;
+    cursor: pointer;
+}
+
+.PlayerAddFavorite {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+}
+
+.PlayerAddFavorite:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.PlayerAddFavorite i {
+    color: darkred;
+}
+
+.PlayerMuteSong {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+}
+
+.PlayerMuteSong:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.PlayerBoxInfo {
+    height: 170px;
+    width: 500px;
+    font-family: 'Fjalla One', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.PlayerBoxInfoAuthor {
+    height: 30px;
+    width: 100%;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #022649;
+}
+
+.PlayerBoxInfoTitle {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    color: #022649;
+}
+
+.PlayerBoxInfoTimeProgress {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.PlayerBoxProgressBar {
+    height: 6px;
+    width: 80%;
+    border-radius: 10px;
+    background: #02264978;
+}
+
+.PlayerBoxProgression {
+    height: 6px;
+    border-radius: 10px;
+    background: #022649;
+}
+
+.PlayerBoxTimeProgression {
+    height: 30px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #022649;
+}
+
+@media screen and (max-width: 767px) {
+    .PlayerBox {
+        width: 100%;
+        height: 100vh;
+        border: none;
+        box-shadow: none;
+        margin-bottom: 0px;
+        justify-content: center;
+    }
+
+    .PlayerBoxClose {
+        height: 8%;
+    }
+
+    .PlayerBoxClose i {
+        font-size: 1.8em;
+        margin-right: 5%;
+    }
+
+    .PlayerBoxContent {
+        height: 90%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .PlayerBoxController {
+        height: 90px;
+    }
+
+    .PlayerBoxMenuOptions {
+        height: 90px;
+    }
+
+    .PlayerBoxMenu {
+        height: 40px;
+        font-size: 0.8em;
+        order: -1;
+    }
+
+    .PlayerBoxInfo {
+        width: 100%;
+    }
+    
+}

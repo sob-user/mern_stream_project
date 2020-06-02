@@ -1,0 +1,163 @@
+.ContactContent {
+    margin-top: 103px;
+    min-height: 88vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.ContactPitch {
+    width: 50%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+}
+
+.ContactPitchOne {
+    height: 90px;
+    width: 100px;
+    border: 1px solid black;
+    margin-left: 21px;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #022649;
+}
+
+.ContactPitchTwo {
+    height: 50px;
+    width: 150px;
+    border: 1px solid black;
+    margin-left: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #022649;
+}
+
+.ContactPitchThree {
+    height: 70px;
+    width: 160px;
+    border: 1px solid black;
+    margin-left: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #022649;
+}
+
+.ContactPitchFour {
+    height: 120px;
+    width: 320px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: #022649;
+}
+
+.ContactFormContainer {
+    width: 50%;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ContactForm {
+    width: 300px;
+    height: 450px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #022649;
+}
+
+.ContactFormHeader {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+}
+
+.ContactFormBody {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ContactFormBody input[type='object'] {
+    width: 230px;
+    height: 40px;
+    border: 2px solid #022649;
+    font-family: 'Fjalla One', sans-serif;
+    margin: 5px;
+    padding: 10px;
+}
+
+.ContactFormBody textarea[type='message'] {
+    width: 230px;
+    height: 160px;
+    border: 2px solid #022649;
+    font-family: 'Fjalla One', sans-serif;
+    margin: 5px;
+    padding: 10px;
+}
+
+.ContactFormBody input[type='submit'] {
+    width: 230px;
+    height: 50px;
+    border: 1px solid #0D0D2B;
+    margin: 5px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.2em;
+    background: #022649;
+    color: white;
+}
+
+.ContactFormBody input[type='submit']:hover {
+    color: white;
+    background: black;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+    .ContactPitch {
+        width: 90%;
+    }
+    
+    .ContactFormContainer {
+        width: 90%;
+    }
+
+    .ContactPitchOne {
+        margin-left: 21px;
+    }
+    .ContactPitchTwo {
+        margin-left: 120px;
+    }
+    .ContactPitchThree {
+        margin-left: 70px;
+    }
+}

@@ -1,0 +1,89 @@
+.LoginPageBody {
+    width: 100vW;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.LoginPageLogo {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginPageLogo img {
+    max-height: 100px;
+}
+
+.LoginPageForm {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginPageForm form {
+    height: 60%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Acme', sans-serif;
+    color: #0D0D2B;
+}
+
+.LoginPageForm input[type='email'],
+.LoginPageForm input[type='password'] {
+    border: 2px solid #0D0D2B;
+    margin: 5px;
+    padding: 10px;
+}
+
+.LoginPageForm input[type='submit'] {
+    background: #0D0D2B;
+    color: white;
+    padding: 10px;
+}
+
+.LoginPageForm input[type='submit']:hover {
+    cursor: pointer;
+    background: #8797AF;
+}
+
+.LoginPageFooter {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-family: 'Acme', sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #0D0D2B;
+}
+
+.LoginPageFooter p  {
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 1023px) {
+    .LoginPageLogo img {
+        max-height: 80px;
+    }
+
+    .LoginPageForm {
+        height: 60%;
+    }
+
+    .LoginPageForm form {
+        height: 100%;
+        width: 300px;
+    }
+
+}

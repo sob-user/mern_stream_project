@@ -1,0 +1,281 @@
+.AddContent {
+    margin-top: 103px;
+    min-height: 88vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AddContentBox {
+    height: 690px;
+    width: 500px;
+}
+
+.AddContentBoxTitle {
+    height: 50px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    background: white;
+}
+
+.AddContentBoxTitle h3 {
+    margin-right: 5px;
+    color: #022649;
+    font-size: 1.3em;
+}
+
+.AddContentBoxTitle p:hover {
+    cursor: pointer;
+    background: #022649;
+    color: white;
+}
+
+.AddContentBoxTitle p {
+    margin-left: 5px;
+    font-size: 0.7em;
+    padding: 5px;
+    color: #022649;
+    border: 1px solid #022649;
+}
+
+.AddContentBoxTitle i {
+    font-size: 2em;
+    margin-left: 80px;
+    color: #022649;
+}
+
+.AddContentBoxTitle i {
+    cursor: pointer;
+}
+
+.AddContentMsg {
+    height: 30px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ItemBox {
+    height: 610px;
+    width: 500px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ItemBoxItem {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #022649;
+    margin: 5px;
+}
+
+.ItemBoxItemDelete {
+    width: 198px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 1px solid #022649;
+}
+
+.ItemBoxItemDelete i {
+    font-size: 2em;
+    color: #022649;
+}
+
+.ItemBoxItemDelete i:hover {
+    cursor: pointer;
+    background: #022649;
+    color: white;
+    padding: 5px;
+    border: 1px solid #022649;
+}
+
+.ItemBoxItemInfo {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fjalla One', sans-serif;
+    color: white;
+}
+
+.ItemBoxItemInfo h4 {
+    font-size: 0.9em;
+}
+
+.ItemBoxItemInfo p {
+    font-size: 0.6em;
+}
+
+.AddContentBoxForm {
+    min-height: 610px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.AddContentMusicStyle {
+    height: 40px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AddContentMusicStyle div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AddContentMusicStyle p {
+    color: #0D0D2B;
+    font-size: 0.8em;
+    padding: 3px;
+    margin-left: 4px;
+    margin-right: 1px;
+
+}
+
+.AddContentMusicStyle i {
+    color: #0D0D2B;
+    font-size: 0.8em;
+    padding: 3px;
+    margin-right: 4px;
+}
+
+.AddContentMusicStyle i:hover {
+    cursor: pointer;
+}
+
+.AddContentBoxForm input[type='text'] {
+    width: 231px;
+    height: 20px;
+    border: 1px solid #0D0D2B;
+    font-family: 'Fjalla One', sans-serif;
+    margin: 10px;
+    padding: 10px;
+}
+
+.AddContentBoxForm input[type='file'] {
+    width: 231px;
+    height: 20px;
+    font-family: 'Fjalla One', sans-serif;
+    margin: 5px;
+    padding: 10px;
+}
+
+.AddContentBoxForm input[type='submit'] {
+    width: 130px;
+    height: 40px;
+    border: 1px solid #0D0D2B;
+    padding: 10px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+    background: #022649;
+    color: white;
+}
+
+.buttonStyleBox {
+    width: 500px;
+    height: 45px;
+    display: flex;align-items: center;
+    justify-content: center;
+}
+
+.buttonAddStyle {
+    width: 231px;
+    height: 20px;
+    border: 1px solid #0D0D2B;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+    background: #022649;
+    color: white;
+}
+
+.AddContentBoxForm input[type='submit']:hover,
+.buttonAddStyle:hover {
+    cursor: pointer;
+    background: black;
+}
+
+@media screen and (max-width: 1023px) {
+
+    .AddContentBox {
+        width: 100%;
+    }
+
+    .AddContentBoxTitle {
+        width: 100%;
+    }
+    
+    .AddContentBoxTitle h3 {
+        margin-right: 6px;
+        font-size: 0.8em;
+    }
+
+    .AddContentBoxTitle p {
+        font-size: 0.6em;
+    }
+    
+    .AddContentBoxTitle i {
+        font-size: 1.8em;
+        margin-left: 60px;
+    }
+
+    .AddContentMsg {
+        width: 100%;
+    }
+
+    .AddContentBoxForm {
+        width: 100%;
+        font-size: 0.7em;
+    }
+
+    .AddContentMusicStyle {
+        width: 100%;
+    }
+
+    .buttonStyleBox {
+        width: 100%;
+    }
+
+    .buttonAddStyle {
+        width: 60px;
+        height: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .AddContentBoxForm input[type='submit'] {
+        width: 200px;
+    }
+
+    .ItemBox {
+        width: 100%;
+        margin-top: 0px;
+    }
+}

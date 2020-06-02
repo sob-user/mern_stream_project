@@ -1,0 +1,186 @@
+.NavbarBody {
+    height: 103px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    background: white;
+    top: 0;
+}
+
+.NavbarLogo {
+    height: 93px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.NavbarLogo img:hover {
+    cursor: pointer;
+}
+
+.NavbarLogo img {
+    max-height: 90px;
+    width: auto;
+}
+
+.NavbarLink {
+    height: 90%;
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.NavbarLi {
+    height: 90%;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Cabin Sketch', cursive;
+}
+
+.NavbarLi a,
+.NavbarLi li {
+    text-decoration: none;
+    color: #022649;
+}
+
+.NavbarLi li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.NavbarLi a:hover,
+.NavbarLi li:hover {
+    color: #1c6420;
+    cursor: pointer;
+}
+
+.NavbarBurgerNav {
+    display: none;
+}
+
+.NavbarSayHi {
+    height: 90%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    color: #022649;
+}
+
+.NavbarMenuResponsive {
+    display: none;
+}
+
+@media screen and (max-width: 1023px) {
+    .NavbarLi {
+        display: none;
+    }
+
+    .NavbarSayHi {
+        display: none;
+    }
+
+    .NavbarLink {
+        justify-content: flex-end;
+    }
+
+    .NavbarLogo img {
+        max-height: 60px;
+        width: auto;
+    }
+
+    .NavbarBurgerNav {
+        display: flex;
+        font-size: 2em;
+        color:  #022649;
+        cursor: pointer;
+        list-style: none;
+        text-align: center;
+        margin-right: 40px;
+    }
+
+    .NavbarMenuResponsive {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 94px;
+        min-height: 88vh;
+        width: 100%;
+        font-family: 'Fjalla One', sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .NavbarMenuResponsive a,
+    .NavbarMenuResponsive p {
+        text-decoration: none;
+        color: white;
+    }
+
+    .NavbarMenuResponsive a:hover,
+    .NavbarMenuResponsive p:hover {
+        color: salmon;
+    }
+
+    .NavbarHome {
+        width: 100%;
+        height: 20%;
+        background: #fe9301;
+        text-align: center;
+    }
+
+    .NavbarPlaylist {
+        width: 100%;
+        height: 20%;
+        background: #057a76;
+        text-align: center;
+    }
+
+    .NavbarContact {
+        width: 100%;
+        height: 20%;
+        background: #037001;
+        text-align: center;
+    }
+
+    .NavbarAccount {
+        width: 100%;
+        height: 20%;
+        background: #034c7f;
+        text-align: center;
+    }
+
+    .NavbarLogout {
+        width: 100%;
+        height: 20%;
+        background: #000000;
+        text-align: center;
+    }
+}
+
+.NewAdded {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 0.6em;
+    color: white;
+    background:#022649;
+    border-radius: 50%;
+}

@@ -1,0 +1,91 @@
+.RegisterPageBody {
+    width: 100vW;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.RegisterPageLogo {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.RegisterPageLogo img {
+    max-height: 100px;
+}
+
+.RegisterPageForm {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.RegisterPageForm form {
+    height: 60%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Acme', sans-serif;
+    color: #0D0D2B;
+}
+
+.RegisterPageForm input[type='email'],
+.RegisterPageForm input[type='password'],
+.RegisterPageForm input[type='text'] {
+    border: 2px solid #0D0D2B;
+    margin: 5px;
+    padding: 10px;
+}
+
+.RegisterPageForm input[type='submit'] {
+    background: #0D0D2B;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.RegisterPageForm input[type='submit']:hover {
+    cursor: pointer;
+    background: #8797AF;
+}
+
+.RegisterPageFooter {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-family: 'Acme', sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #0D0D2B;
+}
+
+.RegisterPageFooter p  {
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 1023px) {
+    .RegisterPageLogo img {
+        max-height: 80px;
+    }
+
+    .RegisterPageForm {
+        height: 60%;
+    }
+
+    .RegisterPageForm form {
+        height: 100%;
+        width: 300px;
+    }
+
+}

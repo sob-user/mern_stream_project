@@ -1,0 +1,39 @@
+.RegisterSuccessBody {
+    width: 100vW;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.RegisterSuccessLogo {
+    width: 85%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RegisterSuccessLogo img {
+    max-height: 100px;
+}
+
+.RegisterSuccessMessage {
+    width: 85%;
+    height: 150px;
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RegisterSuccessHandYes  {
+    width: 85%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
