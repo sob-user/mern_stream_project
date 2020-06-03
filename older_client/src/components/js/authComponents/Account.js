@@ -43,17 +43,20 @@ class Account extends Component {
         const modifyUsernameSuccess = 'MODIFY_USERNAME_SUCCESS'
         const modifyUsernameFail = 'MODIFY_USERNAME_FAIL'
         const modifyMailContactSuccess = 'MODIFY_MAIL_CONTACT_SUCCESS'
-        const modifyMailContactFail = 'MODIFY_MAIL_CONTACT_FAIL'
+        const modifyMailContactFail = 'this address is already taken'
         const modifyPasswordSuccess = 'MODIFY_PASSWORD_SUCCESS'
         const modifyPasswordFail = 'MODIFY_PASSWORD_FAIL'
         const deleteUserAccountFail = 'DELETE_USER_ACCOUNT_FAIL'
 
         if(error !== prevProps.error || success !== prevProps.success) {
-            if(error.id === modifyMailContactFail || success.id === modifyMailContactSuccess) {
-                this.setState({ msgMail: error.msg.msg || error.msg.error ||
-                    success.msg.msg || success.msg.success,
+            if(success.id === modifyMailContactSuccess) {
+                this.setState({ msgMail: success.msg.msg || success.msg.success,
                     timer:true})
                     this.props.loadUserAccount(userId)
+            }
+            else if(error.msg.msg === modifyMailContactFail) {
+                this.setState({ msgMail: error.msg.msg || error.msg.error,
+                    timer:true})
             }
             else if(error.id === modifyUsernameFail || success.id === modifyUsernameSuccess) {
                 this.setState({ msgUser: error.msg.msg || error.msg.error ||
@@ -89,7 +92,7 @@ class Account extends Component {
                                     msgMail: null,
                                     msgPwd: null,
                                     msgDrop: null})
-                }, 3000)
+                }, 2000)
             }
         }
 

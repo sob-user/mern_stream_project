@@ -147,6 +147,23 @@ class Player extends Component {
                 }, 3000)
                 
         }
+
+        if(this.state.duration === this.state.currentTime) {
+            if(this.state.duration !== null && this.state.currentTime !== null) {
+                if(this._componentIsMounted) {
+                    this.nextMusic()
+                }
+            } 
+        }
+
+            
+        if(this._componentIsMounted) {
+            if(this.state.onPlay === true) {
+            const favoriteLength = this.state.maxPosistion
+            const lastMusicId = this.props.favorite[favoriteLength].id
+            const currentId = this.state.id
+            console.log(lastMusicId, currentId)
+        }}
     }
 
     checkIfExistInPlaylist = (favorite) => {
