@@ -59,16 +59,14 @@ class Contact extends Component {
             <article className='ContactContent'>
                 <div className='ContactPitch'>
                     <div className='ContactPitchOne'>
-                        <p>any question ?</p>
+                        <p><i className="fas fa-quote-left"></i> And if we made an audio streaming site. 
+                        Hmm yes it's cool but it's already seen! If this
+                        site offers music that we are no longer used to listening. 
+                        Not bad. And if it's free and without ads. Here we have something <i className="fas fa-quote-right"></i></p>
                     </div>
-                    <div className='ContactPitchTwo'>
-                        <p>some suggestions</p>
-                    </div>
-                    <div className='ContactPitchThree'>
-                        <p>let'see it together</p>
-                    </div>
-                    <div className='ContactPitchFour'>
-                        <p>powered by yesteryear this is our motto but building together is better</p>
+                    <div className='ContactPitchLink'>
+                    <a href='https://www.linkedin.com/in/salem-o-9730b418a/' target='_blank' rel='noopener noreferrer'><i className="fab fa-linkedin"></i></a>
+                    <a href='https://github.com/sob-user/mern_stream_project' target='_blank' rel='noopener noreferrer'><i className="fab fa-github-square"></i></a>
                     </div>
                 </div>
                 <div className='ContactFormContainer'>

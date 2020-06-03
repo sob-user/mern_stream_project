@@ -9,6 +9,7 @@ modifyPassword,
 deleteUserAccount
 } from '../../../actions/authModifyAction'
 import { loadUserAccount } from '../../../actions/authActions'
+import { clearErrors } from '../../../actions/errorActions'
 import '../../css/Account.css'
 
 class Account extends Component {
@@ -37,7 +38,8 @@ class Account extends Component {
 
     componentDidUpdate(prevProps) {
         const { error } =  this.props;
-        const { success } = this.props
+        const { success } = this.props;
+        const userId  = this.props.user._id
         const modifyUsernameSuccess = 'MODIFY_USERNAME_SUCCESS'
         const modifyUsernameFail = 'MODIFY_USERNAME_FAIL'
         const modifyMailContactSuccess = 'MODIFY_MAIL_CONTACT_SUCCESS'
@@ -51,11 +53,13 @@ class Account extends Component {
                 this.setState({ msgMail: error.msg.msg || error.msg.error ||
                     success.msg.msg || success.msg.success,
                     timer:true})
+                    this.props.loadUserAccount(userId)
             }
             else if(error.id === modifyUsernameFail || success.id === modifyUsernameSuccess) {
                 this.setState({ msgUser: error.msg.msg || error.msg.error ||
                     success.msg.msg || success.msg.success,
                     timer: true})
+                    this.props.loadUserAccount(userId)
             }
             else if(error.id === modifyPasswordFail || success.id === modifyPasswordSuccess) {
                 this.setState({ msgPwd: error.msg.msg || error.msg.error ||
@@ -328,7 +332,8 @@ Account.propTypes  = {
     modifyEmail: propTypes.func.isRequired,
     modifyPassword: propTypes.func.isRequired,
     deleteUserAccount: propTypes.func.isRequired,
-    loadUserAccount: propTypes.func.isRequired
+    loadUserAccount: propTypes.func.isRequired,
+    clearErrors:  propTypes.func.isRequired
 }
 
 const mapStateToProps = (state) => ({
@@ -343,5 +348,6 @@ mapStateToProps,
 modifyEmail,
 modifyPassword,
 deleteUserAccount,
-loadUserAccount}
+loadUserAccount,
+clearErrors}
 )(Account)

@@ -34,20 +34,31 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    font-family: 'Acme', sans-serif;
-    color: #0D0D2B;
+    font-family: 'Fjalla One', sans-serif;
+    color: #022649;
+    font-size: 0.8em;
+}
+
+.RegisterPageForm form i {
+    font-size: 1.4em;
+}
+
+.RegisterPageForm form a {
+    color: #022649;
 }
 
 .RegisterPageForm input[type='email'],
 .RegisterPageForm input[type='password'],
 .RegisterPageForm input[type='text'] {
-    border: 2px solid #0D0D2B;
+    border: 1px solid #022649;
+    font-family: 'Fjalla One', sans-serif;
     margin: 5px;
     padding: 10px;
 }
 
 .RegisterPageForm input[type='submit'] {
-    background: #0D0D2B;
+    background: #022649;
+    font-family: 'Fjalla One', sans-serif;
     color: white;
     border-radius: 5px;
     padding: 10px;
@@ -55,7 +66,8 @@
 
 .RegisterPageForm input[type='submit']:hover {
     cursor: pointer;
-    background: #8797AF;
+    color: white;
+    background: #022649;
 }
 
 .RegisterPageFooter {
@@ -64,23 +76,27 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    font-family: 'Acme', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 0.8em;
     font-weight: bold;
-    color: #0D0D2B;
+    color: #022649;
 }
 
 .RegisterPageFooter p  {
     margin-right: 20px;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (min-width: 1023px) {
     .RegisterPageLogo img {
-        max-height: 80px;
+        max-height: 220px;
+    }
+
+    .RegisterPageLogo {
+        height: 30%;
     }
 
     .RegisterPageForm {
-        height: 60%;
+        height: 50%;
     }
 
     .RegisterPageForm form {

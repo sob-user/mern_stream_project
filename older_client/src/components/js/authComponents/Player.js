@@ -37,6 +37,10 @@ class Player extends Component {
 
     componentDidMount() {
         this._componentIsMounted =  true
+
+        const userId = this.props.user._id
+        this.props.getUserFavoriteList(userId)
+        
         const { success } = this.props
         const tracks  = this.props.player.tracks[this.state.position]
         const tracksLength = this.props.player.tracks.length
@@ -74,6 +78,7 @@ class Player extends Component {
     componentWillUnmount() {
         this._componentIsMounted = false
         this.TracksLoaded.removeEventListener("timeupdate", () => {});
+        this.timeout = clearTimeout(() => {})
     }
 
     componentDidUpdate(prevProps) {
@@ -130,15 +135,17 @@ class Player extends Component {
 
                 favorites.map(this.checkIfExistInPlaylist)
             }
-        }
+            }
         }
 
-        if(this.state.timer === true) {
+        if(this.state.timer !== false) {
             this.timeout = setTimeout(() => {
+                if(this._componentIsMounted) {
                 this.setState({ timer: false,
                                 addSuccess: false
-                })
-            }, 3000)
+                })}
+                }, 3000)
+                
         }
     }
 

@@ -245,11 +245,10 @@ router.put('/updatePwd/:id', auth, async(req, res) => {
 });
 
 
-router.delete('/deleteAccount/:id', auth, async(req, res) => {
+router.delete('/deleteAccount/:id/:password', auth, async(req, res) => {
     const userId  = req.params.id
-
     try {
-        const password = req.body.password;
+        const password = req.params.password;
         if(!password) throw Error('enter your password');
 
         const userAccount = await userModel.findById(userId);

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import propTypes from 'prop-types';
 import { registerNewUser } from '../../../actions/authActions';
 import { clearErrors } from '../../../actions/errorActions';
-import olderLogo from '../../img/logo_older.png';
+import olderHomeLogo from '../../img/logo-older-home.png'
 import { Link } from 'react-router-dom';
 import '../../css/Register.css';
 
@@ -60,7 +60,7 @@ class Register extends Component {
         return(
             <section className='RegisterPageBody'>
                 <article className='RegisterPageLogo'>
-                    <img src={olderLogo} alt='stream older logo'/>
+                    <img src={olderHomeLogo} alt='stream older logo'/>
                 </article>
                 <article className='RegisterPageForm'>
                     <form onSubmit={this.onSubmit}>
@@ -93,7 +93,7 @@ class Register extends Component {
                         type='submit'
                         value='REGISTER'
                         />
-                        <p>If you have an account, <Link to={'/'}>login</Link></p>
+                        <p><i className="fas fa-laugh-wink"></i> we are almost there <i className="fas fa-arrow-right"></i> <Link to={'/'}>login here</Link></p>
                     </form>
                 </article>
                 <article className='RegisterPageFooter'>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import propTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import olderLogo from '../../img/logo_older.png'
+import olderHomeLogo from '../../img/logo-older-home.png'
 import { loginUser } from '../../../actions/authActions'
 import '../../css/Login.css';
 
@@ -51,7 +51,7 @@ class Login extends Component {
         return(
             <section className='LoginPageBody'>
                 <article className='LoginPageLogo'>
-                    <img src={olderLogo} alt='older stream logo'/>
+                    <img src={olderHomeLogo} alt='older stream logo'/>
                 </article>
                 <article className='LoginPageForm'>
                     <form onSubmit={this.onSubmit}>
@@ -77,7 +77,7 @@ class Login extends Component {
                         type='submit'
                         value='LOGIN'
                         />
-                        <p>If you don't have an account, <Link to={'/register'}>register</Link></p>
+                        <p><i className="fas fa-grin-wink"></i>  don't be afraid, i don't bite  <i className="fas fa-arrow-right"></i>  <Link to={'/register'}>register here</Link></p>
                     </form>
                 </article>
                 <article className='LoginPageFooter'>

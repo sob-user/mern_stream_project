@@ -14,58 +14,36 @@
     height: 550px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     font-family: 'Fjalla One', sans-serif;
-    text-transform: uppercase;
 }
 
 .ContactPitchOne {
-    height: 90px;
-    width: 100px;
-    border: 1px solid black;
-    margin-left: 21px;
-    font-size: 0.8em;
+    height: 60%;
+    width: 70%;
+    font-size: 2em;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    background: #022649;
+    color: #022649;
 }
 
-.ContactPitchTwo {
-    height: 50px;
-    width: 150px;
-    border: 1px solid black;
-    margin-left: 120px;
+.ContactPitchLink {
+    height: 20%;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    background: #022649;
+    font-size: 3em;
 }
 
-.ContactPitchThree {
-    height: 70px;
-    width: 160px;
-    border: 1px solid black;
-    margin-left: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background: #022649;
+.ContactPitchLink i {
+    margin: 20px;
 }
 
-.ContactPitchFour {
-    height: 120px;
-    width: 320px;
-    border: 1px solid black;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: white;
-    background: #022649;
+.ContactPitchLink a {
+    color: #022649;
 }
 
 .ContactFormContainer {
@@ -145,6 +123,7 @@
 @media screen and (max-width: 1023px) {
     .ContactPitch {
         width: 90%;
+        font-size: 0.7em;
     }
     
     .ContactFormContainer {
@@ -153,11 +132,5 @@
 
     .ContactPitchOne {
         margin-left: 21px;
-    }
-    .ContactPitchTwo {
-        margin-left: 120px;
-    }
-    .ContactPitchThree {
-        margin-left: 70px;
     }
 }

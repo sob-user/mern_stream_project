@@ -122,6 +122,7 @@
         font-family: 'Fjalla One', sans-serif;
         text-transform: uppercase;
         font-weight: bold;
+        background: #034d7ff0;
     }
 
     .NavbarMenuResponsive a,
@@ -133,40 +134,41 @@
     .NavbarMenuResponsive a:hover,
     .NavbarMenuResponsive p:hover {
         color: salmon;
+        cursor: pointer;
     }
 
     .NavbarHome {
         width: 100%;
         height: 20%;
-        background: #fe9301;
+        background: #034d7ff0;
         text-align: center;
     }
 
     .NavbarPlaylist {
         width: 100%;
         height: 20%;
-        background: #057a76;
+        background: #03507f70;
         text-align: center;
     }
 
     .NavbarContact {
         width: 100%;
         height: 20%;
-        background: #037001;
+        background: #034d7ff0;
         text-align: center;
     }
 
     .NavbarAccount {
         width: 100%;
         height: 20%;
-        background: #034c7f;
+        background: #03507f70;
         text-align: center;
     }
 
     .NavbarLogout {
         width: 100%;
         height: 20%;
-        background: #000000;
+        background: #034d7ff0;
         text-align: center;
     }
 }

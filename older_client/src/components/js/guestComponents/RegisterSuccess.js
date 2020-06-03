@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import olderLogo from '../../img/logo_older.png';
+import olderHomeLogo from '../../img/logo-older-home.png' 
 import propTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { clearErrors } from '../../../actions/errorActions';
@@ -22,11 +22,10 @@ class RegisterSuccess extends Component {
         clearTimeout(this.timeout)
     }
     render() {
-        console.log(this.props)
         return(
             <section className='RegisterSuccessBody'>
                 <article className='RegisterSuccessLogo'>
-                    <img src={olderLogo} alt='logo older stream'/>
+                    <img src={olderHomeLogo} alt='logo older stream'/>
                 </article>
                 <article className='RegisterSuccessMessage'>
                     <p>your account was created with success, thanks and enjoy us</p>

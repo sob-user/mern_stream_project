@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import olderLogo from '../../img/logo_older.png'
 import '../../css/Navbar.css'
 import propTypes from 'prop-types'
+import { getUserFavoriteList } from '../../../actions/favoriteActions'
 
 
 export class Navbar extends Component {
@@ -14,6 +15,9 @@ export class Navbar extends Component {
     }
 
     componentDidMount() {
+        const userId = this.props.user._id
+        this.props.getUserFavoriteList(userId)
+        
         const isVerify = this.props.user.verify
         const isAdmin = this.props.user.status
         if(isVerify === true && isAdmin === true) {
@@ -101,6 +105,11 @@ export class Navbar extends Component {
     }
 }
 
+Navbar.propTypes  = {
+    user: propTypes.object.isRequired,
+    getUserFavoriteList: propTypes.func.isRequired
+}
+
 const mapStateToProps = (state) => ({
     user: state.auth.user,
     favorite: state.favoriteList.favoriteList
@@ -108,5 +117,6 @@ const mapStateToProps = (state) => ({
 
 export default connect(
     mapStateToProps,
-    {logoutUser}
+    {logoutUser,
+    getUserFavoriteList}
     )(Navbar)

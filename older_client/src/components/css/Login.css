@@ -34,26 +34,39 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    font-family: 'Acme', sans-serif;
-    color: #0D0D2B;
+    font-family: 'Fjalla One', sans-serif;
+    color: #022649;
+    font-size: 0.8em;
+}
+
+.LoginPageForm form i {
+    font-size: 1.4em;
+}
+
+.LoginPageForm form a {
+    color: #022649;
 }
 
 .LoginPageForm input[type='email'],
 .LoginPageForm input[type='password'] {
-    border: 2px solid #0D0D2B;
+    border: 1px solid #022649;
+    font-family: 'Fjalla One', sans-serif;
     margin: 5px;
     padding: 10px;
 }
 
 .LoginPageForm input[type='submit'] {
-    background: #0D0D2B;
+    background: #022649;
+    font-family: 'Fjalla One', sans-serif;
     color: white;
+    border-radius: 5px;
     padding: 10px;
 }
 
 .LoginPageForm input[type='submit']:hover {
     cursor: pointer;
-    background: #8797AF;
+    background: #034d7f;
+    color: white;
 }
 
 .LoginPageFooter {
@@ -62,19 +75,27 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    font-family: 'Acme', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 0.8em;
     font-weight: bold;
-    color: #0D0D2B;
+    color: #022649;
 }
 
 .LoginPageFooter p  {
     margin-right: 20px;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (min-width: 1023px) {
     .LoginPageLogo img {
-        max-height: 80px;
+        max-height: 220px;
+    }
+
+    .LoginPageLogo {
+        height: 30%;
+    }
+
+    .LoginPageForm {
+        height: 40%;
     }
 
     .LoginPageForm {

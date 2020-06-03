@@ -81,8 +81,8 @@ export const modifyPassword = (userId, currentPassword, password) => (dispatch, 
 }
 
 export const deleteUserAccount = (userId, password) => (dispatch, getState) => {
-    const body = JSON.stringify({ password })
-    axios.delete(`/api/user/deleteAccount/${userId}`, body, tokenConfig(getState))
+
+    axios.delete(`/api/user/deleteAccount/${userId}/${password}`,tokenConfig(getState))
         .then(res =>
         dispatch({
             type:  DELETE_USER_ACCOUNT_SUCCESS,
