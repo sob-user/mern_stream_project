@@ -194,12 +194,12 @@ router.put('/updateMailContact/:id', auth, async(req, res) => {
         const email = req.body.email
         if(!email) throw Error('please fill an new email')
 
-        const  userId = req.params.id;
+        const userId = req.params.id;
 
         const ifMailAlreadyExist = await userModel.findOne({ email });
         if(ifMailAlreadyExist) throw Error('this address is already taken');
 
-        const updateMailContact = await userModel.findOneAndUpdate(userId, req.body, {
+        const updateMailContact = await userModel.findByIdAndUpdate(userId, req.body, {
             new: true, runValidators: true
         });
         if(!updateMailContact) throw Error('something went wrong trying to change email contact');

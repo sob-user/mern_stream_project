@@ -91,10 +91,10 @@ export const loginUser  = ({ email, password }) => dispatch => {
 };
 
 
-export const logoutUser = () => {
-    return {
-        type: LOGOUT_SUCCESS
-    }
+export const logoutUser = () => (dispatch) => {
+    dispatch(
+        returnSuccess(null, 'on logout', 'LOGOUT_SUCCESS'))
+    dispatch({ type: LOGOUT_SUCCESS })
 };
 
 export const tokenConfig = getState => {

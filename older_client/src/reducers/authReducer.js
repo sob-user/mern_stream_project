@@ -55,7 +55,7 @@ export default function(state = initialState, action) {
             }
         case LOGIN_SUCCESS:
             localStorage.setItem('token', action.payload.token);
-            window.location.reload()
+            window.location = '/home'
             return {
                 ...state,
                 ...action.payload,
@@ -72,13 +72,12 @@ export default function(state = initialState, action) {
             }
         case LOGOUT_SUCCESS:
             localStorage.removeItem('token')
-            window.location = '/'
             return {
                 ...state,
                 token: null,
                 user: null,
                 isAuthentificated: false,
-                isLoading: false,
+                isLoading: '',
                 isAdmin: null
             }
         case AUTH_ERROR:

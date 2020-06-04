@@ -43,7 +43,7 @@ export class Navbar extends Component {
     render() {
     const name = this.props.user.username
     const authLinks = (
-    <Link to ={'/'}>
+    <Link to ={'/home'}>
     <img src={olderLogo} alt='older stream logo'/>
     </Link>
     )
@@ -57,7 +57,7 @@ export class Navbar extends Component {
     const mobileMenu  = (
         <article className='NavbarMenuResponsive'>
             <div className='NavbarHome'>
-                <p><Link to ={'/'}>home</Link></p>
+                <p><Link to ={'/home'}>home</Link></p>
             </div>
             <div className='NavbarPlaylist'>
                 <p><Link to ={'/playlist'}>playlist</Link></p>
@@ -81,7 +81,7 @@ export class Navbar extends Component {
                 </article>
                 <article className='NavbarLink'>
                     <ul className='NavbarLi'>
-                        <li><Link to ={'/'}>home</Link></li>
+                        <li><Link to ={'/home'}>home</Link></li>
                         <li><Link to ={'/playlist'}>playlist</Link><div className='NewAdded'>{favorites.length}</div></li>
                         <li><Link to ={'/contact'}>contact</Link></li>
                         <li><Link to ={'/account'}>account</Link></li>
