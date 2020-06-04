@@ -159,10 +159,19 @@ class Player extends Component {
             
         if(this._componentIsMounted) {
             if(this.state.onPlay === true) {
-            const favoriteLength = this.state.maxPosistion
-            const lastMusicId = this.props.favorite[favoriteLength].id
+            const maxPosistion = this.state.maxPosistion
+            const lastMusicId = this.props.player.tracks[maxPosistion].id
             const currentId = this.state.id
-            console.log(lastMusicId, currentId)
+            
+            if(lastMusicId === currentId) {
+                this.TracksLoaded.addEventListener("ended", e => {
+                    if(this._componentIsMounted) {
+                    if(this.state.onStop !== true) {
+                        this.props.playerStop()
+                    }
+                }
+                })
+            }
         }}
     }
 
