@@ -46,8 +46,8 @@ router.get('/getUserFavoriteList/:id', auth, async(req, res) => {
                 author: author,
                 parutionDate: parutionDate,
                 style: musicalStyle,
-                audioSource: `http://localhost:5000/media/${audioFileName}`,
-                imageSource: `http://localhost:5000/media/${imageFilename}`
+                audioSource: `http://51.91.251.172:5000/media/${audioFileName}`,
+                imageSource: `http://51.91.251.172:5000/media/${imageFilename}`
             }
             return favoriteMusicItems
         }
