@@ -41,7 +41,7 @@ class SwitchMan extends Component {
     
     const authLinks = (
         <Fragment>
-            <Route exact path='/home' component={Home}/>
+            <Route exact path='/' component={Home}/>
             <Route path='/playlist' component={Playlist}/>
             <Route path='/contact' component={Contact}/>
             <Route path='/account' component={Account}/>

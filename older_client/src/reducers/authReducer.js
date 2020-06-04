@@ -55,7 +55,7 @@ export default function(state = initialState, action) {
             }
         case LOGIN_SUCCESS:
             localStorage.setItem('token', action.payload.token);
-            window.location = '/home'
+            window.location.reload()
             return {
                 ...state,
                 ...action.payload,

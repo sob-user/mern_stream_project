@@ -87,7 +87,7 @@
 
 @media screen and (min-width: 1023px) {
     .LoginPageLogo img {
-        max-height: 220px;
+        max-height: 180px;
     }
 
     .LoginPageLogo {
