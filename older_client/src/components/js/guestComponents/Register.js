@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import propTypes from 'prop-types';
 import { registerNewUser } from '../../../actions/authActions';
 import { clearErrors } from '../../../actions/errorActions';
-import olderHomeLogo from '../../img/logo-older-home.png'
+import olderHomeLogo from '../../img/logo_older.png'
 import { Link } from 'react-router-dom';
 import '../../css/Register.css';
 

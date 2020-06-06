@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import propTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import olderHomeLogo from '../../img/logo-older-home.png'
+import olderHomeLogo from '../../img/logo_older.png'
 import { loginUser } from '../../../actions/authActions'
 import '../../css/Login.css';
 
