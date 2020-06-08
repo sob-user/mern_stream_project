@@ -47,6 +47,7 @@ class Account extends Component {
         const modifyPasswordSuccess = 'MODIFY_PASSWORD_SUCCESS'
         const modifyPasswordFail = 'MODIFY_PASSWORD_FAIL'
         const deleteUserAccountFail = 'DELETE_USER_ACCOUNT_FAIL'
+        const deleteUserAccountSuccess = 'DELETE_USER_ACCOUNT_SUCCESS'
 
         if(error !== prevProps.error || success !== prevProps.success) {
             if(success.id === modifyMailContactSuccess) {
@@ -75,6 +76,9 @@ class Account extends Component {
             }
             else if(success.id === modifyUsernameSuccess) {
                 this.props.loadUserAccount(this.props.user._id)
+            }
+            else if(success.id === deleteUserAccountSuccess) {
+                this.props.history.push('/accountDeleted')
             }
             else {
                 this.setState({ msgUser: null,
