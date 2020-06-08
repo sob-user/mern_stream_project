@@ -83,11 +83,14 @@ export const modifyPassword = (userId, currentPassword, password) => (dispatch, 
 export const deleteUserAccount = (userId, password) => (dispatch, getState) => {
 
     axios.delete(`/api/user/deleteAccount/${userId}/${password}`,tokenConfig(getState))
-        .then(res =>
-        dispatch({
-            type:  DELETE_USER_ACCOUNT_SUCCESS,
-            payload: res.data
-        }))
+        .then(res =>  {
+            dispatch(
+                returnSuccess(res.data, res.status, 'DELETE_USER_ACCOUNT_SUCCESS'))
+                dispatch({
+                    type: DELETE_USER_ACCOUNT_SUCCESS,
+                    payload: res.data
+                })
+        })
         .catch(err => {
             dispatch(
             returnErrors(err.response.data, err.response.status, 'DELETE_USER_ACCOUNT_FAIL'))

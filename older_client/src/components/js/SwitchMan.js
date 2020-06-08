@@ -9,6 +9,7 @@ import Playlist from '../js/authComponents/Playlist'
 import Contact from '../js/authComponents/Contact'
 import Account from '../js/authComponents/Account'
 import manageContent from '../js/adminComponents/manageContent'
+import DeleteAccountSuccess from '../js/authComponents/DeleteAccountSuccess'
 import history from '../../history'
 
 class SwitchMan extends Component {
@@ -45,6 +46,7 @@ class SwitchMan extends Component {
             <Route path='/playlist' component={Playlist}/>
             <Route path='/contact' component={Contact}/>
             <Route path='/account' component={Account}/>
+            <Route path='/accountDeleted' component={DeleteAccountSuccess}/>
             { isAdmin ? adminLinks: null }
         </Fragment>
     );
