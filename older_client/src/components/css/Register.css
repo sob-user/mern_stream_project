@@ -28,8 +28,8 @@
 }
 
 .RegisterPageForm form {
-    height: 60%;
-    width: 50%;
+    height: 400px;
+    width: 280px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,12 +39,11 @@
     font-size: 0.8em;
 }
 
-.RegisterPageForm form i {
-    font-size: 1.4em;
-}
-
 .RegisterPageForm form a {
-    color: #022649;
+    color: #06c;
+    letter-spacing: inherit;
+    padding: 3px;
+    margin-top: 10px;
 }
 
 .RegisterPageForm input[type='email'],
@@ -96,7 +95,7 @@
     }
 
     .RegisterPageForm {
-        height: 50%;
+        height: 60%;
     }
 
     .RegisterPageForm form {

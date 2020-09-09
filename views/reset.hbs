@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="http://localhost:5000/css/reset.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Fjalla+One&display=swap" rel="stylesheet">
+  <script src="http://localhost:5000/script/resetScript.js"></script>
+  <title>Older Customer Services</title>
+</head>
+<body>
+  <section class='PageBody'>
+    <article class='PageLogo'>
+        <img src='http://localhost:5000/img/logo_older.png' alt='older stream logo'/>
+    </article>
+    <article class='PageForm'>
+        <form onsubmit="postNewPassword(event)">
+            <h3>MODIFY PASSWORD</h3>
+            <p id="message"
+            style="
+            color: darkblue;
+            font-size: 0.8em;
+            "
+            ></p>
+            <input
+            type='password'
+            name='password'
+            id='password'
+            placeholder='type your new password'
+            onchange="onChangePassword(event)"
+            />
+            <input
+            type='password'
+            name='password-confirm'
+            id='password-confirm'
+            placeholder='confirm new password'
+            onchange="onChangeConfirmPassword(event)"
+            />
+            <input
+            type='submit'
+            value='SUBMIT'
+            />
+        </form>
+    </article>
+    <article class='PageFooter'>
+        <p>The goal of this site is to <br></br>
+        rediscovered music of <br></br>
+        yesteryear.
+        </p>
+    </article>
+</section>
+</body>
+</html>

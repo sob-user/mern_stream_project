@@ -93,7 +93,8 @@ class Register extends Component {
                         type='submit'
                         value='REGISTER'
                         />
-                        <p><i className="fas fa-laugh-wink"></i> we are almost there <i className="fas fa-arrow-right"></i> <Link to={'/'}>login here</Link></p>
+                        <p><Link to={'/'}>If you have an account! Login here</Link></p>
+                        <p><Link to={'/forgotPassword'}>Forgot your password?</Link></p>
                     </form>
                 </article>
                 <article className='RegisterPageFooter'>

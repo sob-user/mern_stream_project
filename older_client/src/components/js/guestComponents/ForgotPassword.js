@@ -2,25 +2,27 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import propTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import olderHomeLogo from '../../img/logo_older.png'
-import { loginUser } from '../../../actions/authActions'
-import '../../css/Login.css';
+import olderHomeLogo from '../../img/logo_older.png';
+import { resetPassword } from '../../../actions/resetPasswordAction';
+import '../../css/ForgotPassword.css';
 
-class Login extends Component {
+class ForgotPassword extends Component {
     state= {
+        username: '',
         email: '',
-        password: '',
         msg: null
     }
 
     componentDidUpdate(prevProps) {
         const { error } =  this.props;
-        if(error !== prevProps.error) {
-            if(error.id === 'LOGIN_FAIL') {
+        const { success } = this.props;
+
+        if(error !== prevProps.error || success !== prevProps.success) {
+            if(error.id === 'RESET_PASSWORD_FAIL') {
                 this.setState({ msg: error.msg.msg || error.msg.error })
             }
-            else {
-                this.setState({ msg: null })
+            else if (success.status === 200){
+                this.setState({ msg: 'reset mail sent' })
             }
         }
     }
@@ -28,7 +30,8 @@ class Login extends Component {
 
     static propTypes = {
         error: propTypes.object.isRequired,
-        loginUser: propTypes.func.isRequired
+        success: propTypes.object.isRequired,
+        resetPassword: propTypes.func.isRequired
     }
 
     onChange = e => {
@@ -37,25 +40,26 @@ class Login extends Component {
 
     onSubmit = e => {
         e.preventDefault()
-        const { email, password } = this.state
-        const user = {  email, password }
-        if(email.length === 0 || password.length === 0) {
-            this.setState({ msg: 'please fill all fields' })
+        const username = this.state.username;
+        const email = this.state.email;
+
+        if(username.length === 0 || email.length === 0) {
+            this.setState({ msg: 'please fill all fields' });
         }
         else {
-        this.props.loginUser(user)
+        this.props.resetPassword(username, email);
         }
     }
 
     render() {
         return(
-            <section className='LoginPageBody'>
-                <article className='LoginPageLogo'>
+            <section className='ForgotPasswordBody'>
+                <article className='ForgotPasswordLogo'>
                     <img src={olderHomeLogo} alt='older stream logo'/>
                 </article>
-                <article className='LoginPageForm'>
+                <article className='ForgotPasswordForm'>
                     <form onSubmit={this.onSubmit}>
-                        <h3>LOGIN</h3>
+                        <h3>FORGOT PASSWORD</h3>
                         { this.state.msg ? 
                         (<p style={{color: 'darkred', fontSize: '0.8em'}}>
                         {this.state.msg }</p>) : null }
@@ -67,21 +71,21 @@ class Login extends Component {
                         onChange={this.onChange}
                         />
                         <input
-                        type='password'
-                        name='password'
-                        id='password'
-                        placeholder='password'
+                        type='text'
+                        name='username'
+                        id='username'
+                        placeholder='username'
                         onChange={this.onChange}
                         />
                         <input
                         type='submit'
-                        value='LOGIN'
+                        value='SUBMIT'
                         />
                         <p><Link to={'/register'}>Dont't have an account? Create one now</Link></p>
-                        <p><Link to={'/forgotPassword'}>Forgot your password?</Link></p>
+                        <p><Link to={'/'}>If you have an account! Login here</Link></p>
                     </form>
                 </article>
-                <article className='LoginPageFooter'>
+                <article className='ForgotPasswordFooter'>
                     <p>The goal of this site is to <br></br>
                     rediscovered music of <br></br>
                     yesteryear.
@@ -93,10 +97,11 @@ class Login extends Component {
 }
 
 const mapStateToProps = state =>  ({
-    error: state.error
+    error: state.error,
+    success: state.success
 })
 
 export default connect(
     mapStateToProps,
-    { loginUser }
-    )(Login)
+    { resetPassword }
+    )(ForgotPassword)

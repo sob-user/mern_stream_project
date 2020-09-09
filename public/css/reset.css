@@ -1,4 +1,4 @@
-.LoginPageBody {
+.PageBody {
     width: 100vW;
     height: 100vh;
     display: flex;
@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-.LoginPageLogo {
+.PageLogo {
     width: 100%;
     height: 20%;
     display: flex;
@@ -14,11 +14,11 @@
     align-items: center;
 }
 
-.LoginPageLogo img {
+.PageLogo img {
     max-height: 100px;
 }
 
-.LoginPageForm {
+.PageForm {
     width: 100%;
     height: 50%;
     display: flex;
@@ -27,7 +27,7 @@
     align-items: center;
 }
 
-.LoginPageForm form {
+.PageForm form {
     height: 400px;
     width: 280px;
     display: flex;
@@ -39,22 +39,22 @@
     font-size: 0.8em;
 }
 
-.LoginPageForm form a {
-    color: #06c;
-    letter-spacing: inherit;
-    padding: 3px;
-    margin-top: 10px;
+.PageForm form i {
+    font-size: 1.4em;
 }
 
-.LoginPageForm input[type='email'],
-.LoginPageForm input[type='password'] {
+.PageForm form a {
+    color: #022649;
+}
+
+.PageForm input[type='password'] {
     border: 1px solid #022649;
     font-family: 'Fjalla One', sans-serif;
     margin: 5px;
     padding: 10px;
 }
 
-.LoginPageForm input[type='submit'] {
+.PageForm input[type='submit'] {
     background: #022649;
     font-family: 'Fjalla One', sans-serif;
     color: white;
@@ -62,13 +62,13 @@
     padding: 10px;
 }
 
-.LoginPageForm input[type='submit']:hover {
+.PageForm input[type='submit']:hover {
     cursor: pointer;
     background: #034d7f;
     color: white;
 }
 
-.LoginPageFooter {
+.PageFooter {
     width: 100%;
     height: 20%;
     display: flex;
@@ -80,24 +80,28 @@
     color: #022649;
 }
 
-.LoginPageFooter p  {
+.PageFooter p  {
     margin-right: 20px;
 }
 
 @media screen and (min-width: 1023px) {
-    .LoginPageLogo img {
+    .PageLogo img {
         max-height: 180px;
     }
 
-    .LoginPageLogo {
+    .PageLogo {
         height: 30%;
     }
 
-    .LoginPageForm {
+    .PageForm {
+        height: 40%;
+    }
+
+    .PageForm {
         height: 60%;
     }
 
-    .LoginPageForm form {
+    .PageForm form {
         height: 100%;
         width: 300px;
     }

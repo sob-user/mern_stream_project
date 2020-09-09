@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Login from '../js/guestComponents/Login'
 import Register from '../js/guestComponents/Register'
+import ForgotPassword from '../js/guestComponents/ForgotPassword'
 import RegisterSuccess from '../js/guestComponents/RegisterSuccess'
 import Home from '../js/authComponents/Home'
 import Playlist from '../js/authComponents/Playlist'
@@ -55,6 +56,7 @@ class SwitchMan extends Component {
         <Fragment>
             <Route exact path='/' component={Login}/>
             <Route path='/register' component={Register}/>
+            <Route path='/forgotPassword' component={ForgotPassword}/>
             <Route path='/registerSuccess' component={RegisterSuccess}/>
         </Fragment>
     );
