@@ -17,11 +17,14 @@ class ForgotPassword extends Component {
         const { error } =  this.props;
         const { success } = this.props;
 
-        if(error !== prevProps.error || success !== prevProps.success) {
+        if(error !== prevProps.error ) {
             if(error.id === 'RESET_PASSWORD_FAIL') {
                 this.setState({ msg: error.msg.msg || error.msg.error })
             }
-            else if (success.status === 200){
+        }
+
+        if(success !== prevProps.success) {
+            if (success.status === 200){
                 this.setState({ msg: 'reset mail sent' })
             }
         }
