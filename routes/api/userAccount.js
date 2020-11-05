@@ -29,6 +29,7 @@ router.get('/getUserFavoriteList/:id', auth, async(req, res) => {
         const userAccount = await userModel.findById(req.params.id).populate({ path: 'favorite_list' });
         if(!userAccount) throw Error("user doesn't exist");
 
+        console.log(userAccount)
         const favoriteList = userAccount.favorite_list
 
         function structureResponse(favoriteList) {
@@ -46,8 +47,8 @@ router.get('/getUserFavoriteList/:id', auth, async(req, res) => {
                 author: author,
                 parutionDate: parutionDate,
                 style: musicalStyle,
-                audioSource: `http://51.91.251.172:5000/media/${audioFileName}`,
-                imageSource: `http://51.91.251.172:5000/media/${imageFilename}`
+                audioSource: `https://salem-oulad.com/media/${audioFileName}`,
+                imageSource: `https://salem-oulad.com/media/${imageFilename}`
             }
             return favoriteMusicItems
         }

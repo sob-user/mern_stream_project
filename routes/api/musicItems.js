@@ -88,8 +88,8 @@ router.get('/getMusicItems', auth, async (req, res) => {
                 author: musicAuthor,
                 parutionDate: musicParutionDate,
                 style: musicalStyle,
-                audioSource: `http://51.91.251.172:5000/media/${audioFilename}`,
-                imageSource: `http://51.91.251.172:5000/media/${imageFilename}`
+                audioSource: `https://salem-oulad.com/media/${audioFilename}`,
+                imageSource: `https://salem-oulad.com/media/${imageFilename}`
             }
             return musicItem
         }
